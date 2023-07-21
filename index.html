@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Feeling not good</title>
+</head>
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="falling leaves.css">
+
+<body>
+
+  <input type="checkbox" id="modal">
+  <!-- <label for="modal" class="example-label">Open Modal</label> -->
+  <label for="modal" class="modal-background"></label>
+  <div class="modal">
+    <div class="modal-header" align="center">
+      <h3>Chào bạn mình là _anonys46 (ig). Chúc bạn một ngày tốt lành <img src="/imgs/smile.png" align="center" width="30" height="30" alt=""></h3>
+
+      <button type="button" for="modal" id="btn-close" class="example-label">Okeee</button>
+
+    </div>
+  </div>
+  
+  <section>
+    <div class="set">
+      <div><img src="leaves1.png"></div>
+      <div><img src="leaves2.png"></div>
+      <div><img src="leaves3.png"></div>
+      <div><img src="leaves4.png"></div>
+      <div><img src="leaves1.png"></div>
+      <div><img src="leaves2.png"></div>
+      <div><img src="leaves3.png"></div>
+      <div><img src="leaves4.png"></div>
+    </div>
+    
+    <div id="sad-img">
+      <h2 id="fadeInText">"Love is a promise , love is a souvenir, once given never forgotten, never let it disappear."</h2>
+    </div>
+
+    <div class="set set2">
+      <div><img src="leaves1.png"></div>
+      <div><img src="leaves2.png"></div>
+      <div><img src="leaves3.png"></div>
+      <div><img src="leaves4.png"></div>
+      <div><img src="leaves1.png"></div>
+      <div><img src="leaves2.png"></div>
+      <div><img src="leaves3.png"></div>
+      <div><img src="leaves4.png"></div>
+    </div>
+
+    <div class="set set3">
+      <div><img src="leaves1.png"></div>
+      <div><img src="leaves2.png"></div>
+      <div><img src="leaves3.png"></div>
+      <div><img src="leaves4.png"></div>
+      <div><img src="leaves1.png"></div>
+      <div><img src="leaves2.png"></div>
+      <div><img src="leaves3.png"></div>
+      <div><img src="leaves4.png"></div>
+    </div>
+  </section>
+  <script>
+
+
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-46156385-1', 'cssscript.com');
+    ga('send', 'pageview');
+
+    window.onload = function () {
+      // // Nếu người dùng nhấn OK, thì phát nhạc
+      // var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+      // console.log(isChrome);
+      // if (!isChrome) {
+      //   document.getElementById('iframeAudio').remove();
+      // }
+      // else {
+      //   document.getElementById('playAudio').remove(); // just to make sure that it will not have 2x audio in the background 
+      // }
+
+
+      // var confirmation = prompt("Ngày hôm nay bạn ổn chứ ?");
+
+      var isAccess = false;
+      document.getElementById("btn-close").onclick = () => {
+        isAccess = false;
+        console.log("ok")
+        document.querySelector('.modal').style.display = "none";
+        document.querySelector('.modal-background').style.display = "none";
+        new Audio("/music.mp3").play();
+      }
+      // if (isAccess) {
+        // Lấy thẻ div chứa dòng chữ cần xuất hiện dần
+        const fadeInText = document.getElementById("fadeInText");
+
+        // Tách câu thành từng chữ và tạo hiệu ứng xuất hiện dần cho từng ký tự
+        const textContent = fadeInText.innerText;
+        console.log(textContent);
+        fadeInText.textContent = "";
+        let charIndex = 0;
+
+        function showNextCharacter() {
+          fadeInText.textContent += textContent[charIndex];
+          charIndex++;
+          if (charIndex < textContent.length) {
+            setTimeout(showNextCharacter, 200); // Thời gian 100 tương ứng với 0.1 giây. Bạn có thể điều chỉnh thời gian theo ý muốn.
+          }
+        }
+
+        // Kích hoạt hiệu ứng khi trang web được tải hoàn tất
+        setTimeout(showNextCharacter, 1000); // Chờ 1 giây trước khi bắt đầu hiệu ứng.
+      }
+    // }
+
+  </script>
+</body>
+
+</html>

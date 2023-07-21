@@ -1,0 +1,231 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box ;
+    font-family:'Popins' , sans-serif;
+}
+section{
+    position:relative;
+    width:100%;
+    height:100vh;
+    /* background-image:url('/imgs/tree2.jpg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; */
+    overflow:hidden ;
+    /* display:flex; */
+    justify-content:center;
+    align-items:center;
+    height: 100vh;
+    width: 100%;
+}
+
+
+#fadeInText {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    font-size: 1.6em;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 1px 4px red;
+}
+
+
+/*Modal*/
+
+input[type="checkbox"] {
+	display:none;
+}
+input[type="checkbox"]:checked ~ .modal,
+input[type="checkbox"]:checked ~ .modal-background {
+	display: none;
+}
+.modal-background {
+	width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    z-index: 9998;
+}
+
+#btn-close {
+    margin-top:10px;
+    border: none;
+    border-radius: 6px;
+}
+.modal {
+    border-radius: 8px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    display: block;	
+    width: 300px;
+    height: 150px;
+    background-color: #fff;
+    box-sizing: border-box;
+    z-index: 9999;
+}
+.modal > p {
+	padding: 15px;
+    margin: 0;
+}
+.modal-header {
+    border-radius: 8px;
+	background-color: #f9f9f9;
+    border-bottom: 1px solid #dddddd;
+    box-sizing: border-box;
+    height: 50px;
+}
+.modal-header h3 {
+	margin: 0;
+    box-sizing: border-box;
+    padding-left: 15px;
+    line-height: 50px;
+    color: #4d4d4d;
+    font-size: 16px;
+    display: inline-block;
+}
+.modal-header label {
+	box-sizing: border-box;
+    border-left: 1px solid #dddddd;
+    float: right;
+    line-height: 50px;
+    padding: 0 15px 0 15px;
+    cursor: pointer;
+}
+.modal-header label:hover img {
+	opacity: 0.6;
+}
+/* below is optional, it is just an example for the blue button */
+.example-label {
+	box-sizing: border-box;
+    display: inline-block;
+    padding: 10px;
+    background-color: #375d91;
+    color: #f9f9f9;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.example-label:hover {
+	background-color: #3c669f;
+}
+
+/*End Modal*/
+
+#sad-img{
+    width: 100%;
+    height: 100vh;
+}
+
+#sad-img {
+    -webkit-box-align:center;
+    -webkit-box-pack:center;
+    display:-webkit-box;
+    position: relative;
+    background-image:url('/imgs/tree2.png');
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-size: 100% 100%;
+}
+
+div>img {
+    width: 60px;
+}
+section .set{
+    position:absolute ;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    pointer-events:none;
+}
+section .set div{
+    position:absolute ;
+    display:block ;
+}
+
+.set img {
+    z-index: 12;
+}
+section .set div:nth-child(1){
+    left:20%;
+    animation:animate 15s linear infinite ;
+    animation-delay:-7s;
+}
+section .set div:nth-child(2){
+    left:50%;
+    animation:animate 20s linear infinite ;
+    animation-delay:-5s;
+}
+section .set div:nth-child(3){
+    left:70%;
+    animation:animate 20s linear infinite ;
+    animation-delay:0s;
+}
+section .set div:nth-child(4){
+    left:0%;
+    animation:animate 15s linear infinite ;
+    animation-delay:-5s;
+}
+section .set div:nth-child(5){
+    left:85%;
+    animation:animate 18s linear infinite ;
+    animation-delay:-10s;
+}
+section .set div:nth-child(6){
+    left:20%;
+    animation:animate 15s linear infinite ;
+    animation-delay:-7s;
+}
+section .set div:nth-child(7){
+    left:0%;
+    animation:animate 12s linear infinite ;
+    
+}
+section .set div:nth-child(8){
+    left:60%;
+    animation:animate 15s linear infinite ;
+}
+@keyframes animate{
+    0%{
+        opacity:0;
+        top: -10%;
+        transform:translateX(20px) rotate(0deg);
+    }
+    10%{
+        opacity:1;
+    }
+    20%{
+        transform:translateX(-20px) rotate(45deg);
+    }
+    40%{
+        transform:translateX(-20px) rotate(90deg);
+    }
+    60%{
+        transform:translateX(20px) rotate(180deg);
+    }
+    80%{
+        transform:translateX(-20px) rotate(180deg);
+    }
+    100%{
+        top: 110%;
+        transform:translateX(-20px) rotate(225deg);
+    }
+    
+}
+.set2{
+    transform:scale(2) rotateY(180deg);
+    filter:blur(2px);
+}
+.set3{
+    transform:scale(0.8) rotateX(180deg);
+    filter:blur(4px);
+}
