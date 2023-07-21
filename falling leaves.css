@@ -130,7 +130,7 @@ input[type="checkbox"]:checked ~ .modal-background {
     -webkit-box-pack:center;
     display:-webkit-box;
     position: relative;
-    background-image:url('/imgs/tree2.png');
+    background-image:url('imgs/tree2.png');
     background-repeat:no-repeat;
     background-size: contain;
     background-size: 100% 100%;
